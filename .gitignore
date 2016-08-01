@@ -8,3 +8,4 @@ typings
 *.jpg
 *.png
 *.zip
+!package.json

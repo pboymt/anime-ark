@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "pboymt",
+  "license": "ISC",
+  "typescript": {
+    "definitions": [
+      "typings/node/node.d.ts"
+    ]
+  },
+  "dependencies": {
+    "request": "^2.73.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "tsc": "^1.8.10",
+    "typings": "^1.0.4"
+  }
+}
