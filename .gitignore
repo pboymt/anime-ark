@@ -1,7 +1,10 @@
 node_modules
 typings
 .vscode
-*.json
+*.js
 *.html
 *.json
 *.xml
+*.jpg
+*.png
+*.zip
