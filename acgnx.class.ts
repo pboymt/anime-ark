@@ -1,16 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as xml2js from 'xml2js';
-class listItem {
-    base: string;
-    from: string;
-    title: string;
-    timestamp: number;
-    torrent: string;
-}
+import {listItem} from './list-item.class';
 class acgnxParser {
+    static rssLink: string = 'https://share.acgnx.se/rss.xml';
     private options;
-    private raw: String;
+    private raw: string;
     private XMLobj: Object;
     list: Object[];
     public constructor(str: string, options: Object) {

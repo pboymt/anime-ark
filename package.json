@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "build": "tsc index.ts",
+    "build:w": "tsc -w index.ts",
+    "start": "node index.js"
   },
   "author": "pboymt",
   "license": "GPL-3.0",
@@ -13,7 +16,12 @@
       "typings/node/node.d.ts"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pboymt/anime-ark.git"
+  },
   "dependencies": {
+    "mongoose": "^4.5.7",
     "request": "^2.73.0",
     "xml2js": "^0.4.17"
   },

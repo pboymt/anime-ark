@@ -2,14 +2,10 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
-import {parseString} from 'xml2js';
-//import mongoose = require('mongoose');
 import {acgnxParser} from './acgnx.class';
-//var conn = mongoose.createConnection('');
-//var parseString = xml2js.parseString;
 
 
-https.get('https://share.acgnx.se/rss.xml', (res) => {
+https.get(acgnxParser.rssLink, (res) => {
     if (res.statusCode == 200) {
         let str: string = '';
         res.setEncoding('utf8');
