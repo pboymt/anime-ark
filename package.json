@@ -7,7 +7,7 @@
     "test": "node index.js"
   },
   "author": "pboymt",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "typescript": {
     "definitions": [
       "typings/node/node.d.ts"
