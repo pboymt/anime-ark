@@ -1,11 +1,11 @@
 node_modules
 typings
+ignore
 .vscode
+tsd.json
 *.js
 *.html
-*.json
 *.xml
 *.jpg
 *.png
 *.zip
-!package.json
