@@ -2,6 +2,13 @@
 import * as mongoose from "mongoose";
 mongoose.connect('mongodb://localhost/ark');
 var db = mongoose.connection;
+interface TorrentInfo extends mongoose.Document {
+    hash: string;
+    title: string;
+    from: string;
+    timestamp: number;
+    torrent: string;
+}
 var _schema: mongoose.Schema = new mongoose.Schema({
     hash: {
         type: String,
