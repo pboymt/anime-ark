@@ -1,5 +1,5 @@
 node_modules
-typings
+#typings
 ignore
 .vscode
 tsd.json

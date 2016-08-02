@@ -4,7 +4,6 @@ import * as path from 'path';
 import * as https from 'https';
 import {acgnxParser} from './acgnx.class';
 
-
 https.get(acgnxParser.rssLink, (res) => {
     if (res.statusCode == 200) {
         let str: string = '';
