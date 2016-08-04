@@ -1,7 +1,8 @@
 /// <reference path="typings/index.d.ts" />
+import {readFileSync} from 'fs';
 import * as mongoose from "mongoose";
-mongoose.connect('mongodb://localhost/ark');
-var db = mongoose.connection;
+let conn = mongoose.createConnection('mongodb://localhost/ark');
+//let db = mongoose.connection;
 interface TorrentInfo extends mongoose.Document {
     hash: string;
     title: string;
@@ -9,7 +10,7 @@ interface TorrentInfo extends mongoose.Document {
     timestamp: number;
     torrent: string;
 }
-var _schema: mongoose.Schema = new mongoose.Schema({
+let _schema: mongoose.Schema = new mongoose.Schema({
     hash: {
         type: String,
         require: true
@@ -31,6 +32,15 @@ var _schema: mongoose.Schema = new mongoose.Schema({
         require: true
     }
 });
-db.once('open', () => {
+let _model = mongoose.model<TorrentInfo>('torrent', _schema);
+/**
+ * ArkCURD
+ */
+class ArkCURD {
+    constructor(parameters) {
+
+    }
+}
+conn.once('open', () => {
     console.log("DB OK");
 });
